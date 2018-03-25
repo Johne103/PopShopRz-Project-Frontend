@@ -37,7 +37,8 @@ function UsersNewController(User, $state) {
 }
 
 UsersShowController.$inject = ['User', '$state', '$auth', '$scope', '$window', '$http'];
-function UsersShowController(User, $state, $auth, $scope, $window, $http) {
+// function UsersShowController(User, $state, $auth, $scope, $window, $http) {
+function UsersShowController(User, $state, $auth, $scope, $window) {
   const usersShow = this;
 
   usersShow.user = User.get($state.params);
