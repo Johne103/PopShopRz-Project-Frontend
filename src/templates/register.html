@@ -1,0 +1,62 @@
+<!-- <div class="row">
+  <h1 class="col-md-4 col-xs-8 pageLine">SoBuyLocal</h1>
+  <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries1.png" alt="image">
+  <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries2.png" alt="image">
+  <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries3.png" alt="image">
+  <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries4.png" alt="image">
+  <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries5.png" alt="image">
+</div>
+<div class="rowUnderline">
+  <p class="underLine"></p>
+</div> -->
+
+<h1 class="pageTitle">Register</h1>
+
+
+<form novalidate ng-submit="register.submit()">
+  <div>
+    <label>Name:</label>
+    <input class="form-control"  type="text" placeholder="Input name" ng-model="register.user.username">
+  </div>
+  <div>
+    <label>Email:</label>
+    <input class="form-control" type="email" placeholder="Input email" ng-model="register.user.email">
+  </div>
+  <div>
+    <label>Password:</label>
+    <input class="form-control" type="password" placeholder="Input password" ng-model="register.user.password">
+  </div>
+  <div>
+    <label>Password Confirmation:</label>
+    <input class="form-control" type="password" placeholder="Password Confirmation" ng-model="register.user.password_confirmation">
+  </div>
+  <!-- <div>
+    <label>Check the box if registering a store</label>
+    <input class="form-control" type="checkbox" ng-model="register.user.is_store" class="u-full-width"> -->
+    <!-- <input type="text" name="store_name" placeholder="Store name" ng-model="register.user.store_name" class="u-full-width"> -->
+     <!-- <tt>is_store = {{checkboxModel.is_store}}</tt> -->
+  <!-- </div> -->
+  <!-- <div> -->
+  <!-- <div ng-show="register.user.is_store"> -->
+    <!-- <label>Address</label> -->
+    <!-- <input type="text" name="address" placeholder="Input store address" ng-model="register.user.address" class="u-full-width"> -->
+    <!-- <input class="form-control" type="text" name="address" placeholder="Enter store address" ng-model="placesNew.place.address" google-place place="placesNew.place" class="u-full-width">
+  </div> -->
+
+  <!-- <div ng-show="register.user.is_store">
+    <label>Opening hours</label>
+    <input class="form-control" type="text" name="open_from" placeholder="Open from" ng-model="register.user.address" class="u-full-width">
+    <input class="form-control" type="text" name="open_until" placeholder="Open until" ng-model="register.user.address" class="u-full-width">
+  </div> -->
+
+  <!-- <div ng-show="register.user.is_store">
+    <label>Web site</label>
+    <input class="form-control" type="text" name="Web site" placeholder="Input website" ng-model="register.user.address" class="u-full-width">
+  </div> -->
+  <!-- <div ng-show="register.user.is_store">
+    <label>Phone number</label>
+    <input class="form-control" type="text" name="Phone number" placeholder="Phone number" ng-model="register.user.address" class="u-full-width">
+  </div> -->
+
+  <button class="btn btn-primary">Register</button>
+</form>
