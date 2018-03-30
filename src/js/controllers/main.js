@@ -6,10 +6,6 @@ MainController.$inject = ['$auth', '$state', '$rootScope', 'User', '$window'];
 function MainController($auth, $state, $rootScope, User, $window) {
   const main = this;
 
-// MainController.$inject = ['$auth', '$state', '$rootScope', 'User'];
-// function MainController($auth, $state, $rootScope, User) {
-//   const main = this;
-
   main.isLoggedIn = $auth.isAuthenticated;
   main.message = null;
 
