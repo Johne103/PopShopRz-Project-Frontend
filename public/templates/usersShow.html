@@ -1,0 +1,93 @@
+<section>
+  <!-- <div class="row">
+    <h1 class="col-md-4 col-xs-8 pageLine">SoBuyLocal</h1>
+    <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries1.png" alt="image">
+    <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries2.png" alt="image">
+    <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries3.png" alt="image">
+    <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries4.png" alt="image">
+    <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries5.png" alt="image">
+  </div> -->
+  <!-- <div class="rowUnderline">
+    <p class="underLine"></p>
+  </div> -->
+
+
+  <!-- <div ng-if="main.currentUser.is_store">
+
+    <h1 class="pageTitle">Store Details</h1>
+
+    <h2 class="storeName">Store name: {{ usersShow.user.username }}</h2>
+    <h4 class="storeDetail">Email: {{ usersShow.user.email }}</h4>
+    <h4 class="storeDetail">Store location: {{ usersShow.user.address }}</h4>
+    <h4 class="storeDetail">Open from: {{ usersShow.user.open_from }} am</h4>
+    <h4 class="storeDetail">Open until: {{ usersShow.user.open_until }} pm</h4>
+    <h4 class="storeDetail">Website: {{ usersShow.user.website }}</h4>
+    <h4 class="storeDetail">Phone number: {{ usersShow.user.phone_number }}</h4>
+  </div> -->
+  <div ng-if="!main.currentUser.is_store">
+
+    <h1 class="pageTitle">Customer/Store Details</h1>
+
+    <!-- <h2 class="storeName">User/Store name: {{ usersShow.user.username }}</h2>
+    <h4 class="storeDetail">Email: {{ usersShow.user.email }}</h4>
+    <h4 class="storeDetail">Customer/Store address: {{ usersShow.user.address }}</h4>
+    <h4 class="storeDetail">Open from: {{ usersShow.user.open_from }} am</h4>
+    <h4 class="storeDetail">Open until: {{ usersShow.user.open_until }} pm</h4>
+    <h4 class="storeDetail">Website: {{ usersShow.user.website }}</h4>
+    <h4 class="storeDetail">Phone number: {{ usersShow.user.phone_number }}</h4>
+    <h4 class="storeDetail">Distance to selected store: {{ usersShow.distanceToStore }}</h4> -->
+  </div>
+  <!-- <h4 class="userHeading4">Products</h4>
+  <ol>
+    <li ng-repeat="product in usersShow.user.products">
+      <a ui-sref="productsShow({ id: product.id })">
+        <h4 class="productList"> {{ product.name }} </h4>
+        <img class="userShowImg" ng-src="{{ product.image }}" alt="product image"/>
+      </a>
+      <button ng-click="main.addToSelectedProducts(product)">Add to Basket</button>
+    </li>
+  </ol> -->
+
+  <!-- <div>
+     <input id="origin-input" ng-model="requestsNew.request.location" class="controls" type="text"
+       placeholder="Enter an origin" googleplace request="requestsNew.request">
+
+     <input id="destination-input" ng-model="requestsNew.request.destination" class="controls" type="text"
+       placeholder="Enter a destination" googleplace request="requestsNew.request">
+
+   </div> -->
+<!-- <div ng-if="!main.currentUser.is_store">
+  <a ui-sref="usersEdit({ id: usersShow.user.id })" class="button">Edit<a>
+  <button ng-if="usersShow.isLoggedIn()" ng-click="usersShow.delete()" ng-click="usersShow.delete()">Delete</button>
+</div> -->
+
+
+
+  <!-- <google-map markers="usersIndex.all" center="main.location"></google-map> -->
+
+
+
+  <!-- <div ng-if="main.currentUser.is_store">
+    <google-map marker="usersShow.user" center="usersShow.location" ng-if="usersShow.user.$resolved"></google-map>
+    <a ui-sref="usersEdit({ id: usersShow.user.id })" class="button">Edit<a>
+    <button class="btn btn-danger"  ng-if="usersShow.isLoggedIn()" ng-click="usersShow.delete()" ng-click="usersShow.delete()">Delete</button>
+  </div> -->
+
+  <div ng-if="!main.currentUser.is_store">
+    <google-map marker="usersShow.user" center="usersShow.location" ng-if="usersShow.user.$resolved"></google-map>
+    <!-- <a ui-sref="usersEdit({ id: usersShow.user.id })" class="button">Edit<a>
+    <button class="btn btn-danger"  ng-if="usersShow.isLoggedIn()" ng-click="usersShow.delete()" ng-click="usersShow.delete()">Delete</button> -->
+  </div>
+</section>
+
+
+<!-- <section>
+  <img ng-src="{{ filmsShow.film.posterImage }}">
+  <h2>{{ filmsShow.film.title }}</h2>
+  <h4>{{ filmsShow.film.director }}</h4>
+  <p>{{ filmsShow.film.releaseDate | date: 'd MMM yyyy' }}</p>
+
+  <a ui-sref="filmsEdit({ id: filmsShow.film._id })"
+  class="button">Edit</a>
+  <button ng-if="filmsShow.isLoggedIn()" ng-click="filmsShow.delete()" ng-click="filmsShow.delete()">Delete</button>
+</section> -->

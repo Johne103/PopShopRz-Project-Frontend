@@ -23,6 +23,7 @@ function MainController($auth, $state, $rootScope, User, $window) {
 
     if($auth.isAuthenticated()) {
       main.currentUser = User.get({ id: $auth.getPayload().id });
+      console.log('main.currentUser');
     }
 
     if(!$auth.isAuthenticated() && protectedStates.includes(toState.name)) {
