@@ -6,8 +6,6 @@ angular.module('PopShopRzProject')
   .controller('ProductsEditController', ProductsEditController);
   // .controller('ProductsPickedIndexController', ProductsPickedIndexController);
 
-
-
 ProductsIndexController.$inject = ['Product', '$auth'];
 function ProductsIndexController(Product, $auth) {
   const productsIndex = this;
