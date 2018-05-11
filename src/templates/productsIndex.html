@@ -1,0 +1,33 @@
+<section>
+  <div class="row">
+    <h1 class="col-md-4 col-xs-8 pageLine">SoBuyLocal</h1>
+    <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries1.png" alt="image">
+    <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries2.png" alt="image">
+    <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries3.png" alt="image">
+    <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries4.png" alt="image">
+    <img class="col-md-2 col-xs-2 pageLineImg" src="/images/groceries5.png" alt="image">
+  </div>
+  <div class="rowUnderline">
+    <p class="underLine"></p>
+  </div>
+
+  <h1 class="pageTitle">Product Index</h1>
+
+  <h2 class="storeName">Store name: {{ main.currentUser.username }}</h2>
+  <!-- <div class="card-deck-wrapper"> -->
+  <div class="row">
+    <div class="col-md-4 col-sm-12 cards-single" ng-repeat="product in productsIndex.all">
+      <div class="card">
+        <img class="card-img-prod" ng-src="{{ product.image }}" alt="product image">
+        <div class="card-block">
+          <a ui-sref="productsShow({ id: product.id })">
+            <h4 class="productListcard-title"> {{ product.name }} </h4>
+          </a>
+          <h4 class="productListcard-title"> Use by Date: {{ product.end_time  | date : dd/mm/yyyy }} </h4>
+          <h4 class="productListcard-title"> Current price: £{{ product.original_price | number : 2 }} </h4>
+          <button class="btn btn-primary" ng-click="productsIndex.onOffer(product)" ng-if="!product.is_available">Put on Offer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
